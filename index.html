@@ -105,8 +105,8 @@
     margin-bottom: 0.4rem;
   }
   .nav-logo { display: flex; align-items: center; }
-  .nav-logo img { height: 72px; transition: height 0.4s; }
-  nav.scrolled .nav-logo img { height: 48px; }
+  .nav-logo img { height: 56px; transition: height 0.4s; object-fit: contain; }
+  nav.scrolled .nav-logo img { height: 40px; }
   .nav-powered {
     position: absolute; left: 0; top: 50%; transform: translateY(-50%);
     display: flex; align-items: center;
@@ -174,8 +174,8 @@
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background: url('trackman_custom.jpeg') center/cover no-repeat;
-    filter: brightness(0.35);
+    background: url('trackman_x-small_1.jpeg') center/cover no-repeat;
+    filter: brightness(0.5);
     transform: scale(1.05);
     transition: transform 8s ease;
   }
@@ -184,9 +184,9 @@
     position: absolute; inset: 0;
     background: linear-gradient(
       135deg,
-      rgba(7,9,10,0.85) 0%,
-      rgba(7,9,10,0.5) 40%,
-      rgba(13,31,18,0.4) 100%
+      rgba(7,9,10,0.65) 0%,
+      rgba(7,9,10,0.3) 40%,
+      rgba(13,31,18,0.2) 100%
     );
   }
   .hero-content {
@@ -876,10 +876,13 @@
 <nav id="mainNav">
   <div class="nav-top">
     <div class="nav-powered">
-      <img src="logos/trackman_powered_by_white.png" alt="Powered by Trackman">
+      <span style="display:flex;align-items:center;gap:0.4rem;opacity:0.7;">
+  <span style="font-size:0.55rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#c9a86c;font-family:Inter,sans-serif;">Powered by</span>
+  <img src="GreeceGolf/logo_trackman.svg" alt="Trackman" style="height:22px;filter:invert(1) brightness(1.2);opacity:1;">
+</span>
     </div>
     <a href="#hero" class="nav-logo">
-      <img src="logos/golfview_logo_white.png" alt="Golf View">
+      <img src="logos/nikos_golfviewlogo.jpeg" alt="Golf View">
     </a>
     <div class="nav-right">
       <div class="lang-toggle">
@@ -965,12 +968,12 @@
     <div class="partner-strip reveal">
       <div class="partner-strip-inner">
         <img src="GreeceGolf/logo_trackman.svg" alt="Trackman">
-        <img src="logos/macgregorgolfgreen.jpeg" alt="MacGregor Golf" data-no-invert>
+        <img src="logos/macgregorgolfgreen.jpeg" alt="MacGregor Golf" style="filter:brightness(0) invert(1);opacity:0.5;">
         <img src="GreeceGolf/ben_hogan_v2.png" alt="Ben Hogan">
         <img src="GreeceGolf/logo_ram.png" alt="Ram Golf">
         <!-- duplicate set for seamless loop -->
         <img src="GreeceGolf/logo_trackman.svg" alt="Trackman">
-        <img src="logos/macgregorgolfgreen.jpeg" alt="MacGregor Golf" data-no-invert>
+        <img src="logos/macgregorgolfgreen.jpeg" alt="MacGregor Golf" style="filter:brightness(0) invert(1);opacity:0.5;">
         <img src="GreeceGolf/ben_hogan_v2.png" alt="Ben Hogan">
         <img src="GreeceGolf/logo_ram.png" alt="Ram Golf">
       </div>
@@ -1250,7 +1253,7 @@
     <span class="label reveal" data-i18n="contact.label">Get in Touch</span>
     <h2 class="section-title reveal" data-i18n="contact.h2">Let's Talk <em class="gold">Golf</em></h2>
     <div class="contact-grid reveal">
-      <form class="contact-form" name="golfview-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+      <form action='/thank-you' class='contact-form' data-netlify='true' method='POST' name='golfview-enquiry' netlify-honeypot='bot-field'>
       <input type="hidden" name="form-name" value="golfview-enquiry">
       <p style="display:none"><label>Skip: <input name="bot-field"></label></p>
         <input type="text" placeholder="Your Name" data-i18n-ph="form.name" required>
@@ -1297,7 +1300,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="logos/golfview_logo_white.png" alt="Golf View">
+      <img src="logos/nikos_golfviewlogo.jpeg" alt="Golf View">
     </div>
     <div class="footer-links">
       <a href="#indoor">Indoor</a>
