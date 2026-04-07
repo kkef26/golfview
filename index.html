@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Golf View — Official Trackman distributor for Greece, Cyprus and the Balkans. Indoor simulators, outdoor golf, player equipment and range infrastructure. One partner for everything golf.">
+  <meta property="og:title" content="Golf View — The Complete Golf Experience">
+  <meta property="og:description" content="Official Trackman distributor for Greece, Cyprus and the Balkans. Indoor simulators, outdoor golf, player equipment and range solutions.">
+  <meta property="og:image" content="https://golfview.golf/GreeceGolf/logo_trackman.svg">
+  <meta property="og:url" content="https://golfview.golf">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://golfview.golf">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf View — The Complete Golf Experience</title>
+  <meta name="description" content="Golf View brings world-class indoor golf, premium equipment, outdoor course design, and range infrastructure to Greece, Cyprus &amp; the Balkans. Official Trackman Installer.">
+  <meta property="og:title" content="Golf View — The Complete Golf Experience">
+  <meta property="og:description" content="Indoor simulators. Player equipment. Course design. Range infrastructure. One partner for everything golf.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #07090a;
+    --black-rich: #0a0e07;
+    --green-deep: #0d1f12;
+    --green-mid: #1a3a22;
+    --green-light: #2a5f3e;
+    --gold: #c9a86c;
+    --gold-light: #e8c98a;
+    --gold-dim: rgba(201,168,108,0.15);
+    --white: #f4f1ec;
+    --white-pure: #ffffff;
+    --grey: #888;
+    --grey-dark: #444;
+    --grey-light: #bbb;
+    --trackman-orange: #e85d04;
+    --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ═══════ UTILITIES ═══════ */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .container-wide { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+  .gold { color: var(--gold); }
+  .label {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .label::before {
+    content: '';
+    display: inline-block;
+    width: 24px; height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .section-sub {
+    font-size: 0.92rem;
+    color: var(--grey-light);
+    max-width: 600px;
+    line-height: 1.8;
+  }
+
+  section { padding: 7rem 0; }
+  section:nth-child(even) { background: var(--black-rich); }
+
+  /* ═══════ NAV ═══════ */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 1rem 2rem 0.6rem;
+    transition: all 0.4s ease;
+    background: transparent;
+  }
+  nav.scrolled {
+    background: rgba(7,9,10,0.95);
+    backdrop-filter: blur(20px);
+    padding: 0.5rem 2rem 0.4rem;
+    border-bottom: 1px solid rgba(201,168,108,0.08);
+  }
+  .nav-top {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; position: relative;
+    margin-bottom: 0.4rem;
+  }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-logo img { height: 72px; transition: height 0.4s; }
+  nav.scrolled .nav-logo img { height: 48px; }
+  .nav-powered {
+    position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    display: flex; align-items: center;
+  }
+  .nav-powered img { height: 40px; opacity: 0.75; transition: opacity 0.3s; }
+  .nav-powered:hover img { opacity: 1; }
+  .nav-right {
+    position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .nav-bottom {
+    display: flex; align-items: center; gap: 2.5rem;
+  }
+  .nav-bottom a {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(244,241,236,0.55);
+    transition: color 0.3s;
+    position: relative;
+    padding-bottom: 2px;
+  }
+  .nav-bottom a:hover { color: var(--gold); }
+  .nav-bottom a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.3s;
+  }
+  .nav-bottom a:hover::after { width: 100%; }
+  .nav-cta {
+    background: transparent !important;
+    border: 1px solid rgba(201,168,108,0.4) !important;
+    padding: 0.55rem 1.4rem !important;
+    border-radius: 2px !important;
+    transition: all 0.3s !important;
+  }
+  .nav-cta:hover {
+    background: var(--gold) !important;
+    color: var(--black) !important;
+    border-color: var(--gold) !important;
+  }
+  .lang-toggle {
+    display: flex; gap: 0; border: 1px solid rgba(201,168,108,0.2); border-radius: 2px; overflow: hidden;
+  }
+  .lang-toggle button {
+    background: transparent; border: none; color: var(--grey);
+    font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em;
+    padding: 0.35rem 0.6rem; cursor: pointer; transition: all 0.3s;
+    font-family: var(--font-body);
+  }
+  .lang-toggle button.active { background: var(--gold); color: var(--black); }
+
+  /* ═══════ HERO ═══════ */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url('trackman_custom.jpeg') center/cover no-repeat;
+    filter: brightness(0.35);
+    transform: scale(1.05);
+    transition: transform 8s ease;
+  }
+  #hero:hover .hero-bg { transform: scale(1); }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(7,9,10,0.85) 0%,
+      rgba(7,9,10,0.5) 40%,
+      rgba(13,31,18,0.4) 100%
+    );
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto;
+    padding: 8rem 2rem 6rem;
+  }
+  .hero-logo {
+    height: 52px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-headline {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(244,241,236,0.65);
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+  .hero-ctas { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.9rem 2.2rem;
+    background: var(--gold);
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: none; border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.9rem 2.2rem;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid rgba(244,241,236,0.2);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* Hero bottom stat bar */
+  .hero-stats {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 2;
+    background: rgba(7,9,10,0.8);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(201,168,108,0.08);
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1.5rem 2rem;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat-num {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold);
+  }
+  .hero-stat-label {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: 0.2rem;
+  }
+
+  /* ═══════ FOUR PILLARS ═══════ */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .pillar-card {
+    position: relative;
+    background: linear-gradient(160deg, rgba(13,31,18,0.5) 0%, rgba(10,14,7,0.8) 100%);
+    border: 1px solid rgba(201,168,108,0.08);
+    border-radius: 4px;
+    padding: 2.5rem 1.75rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+  }
+  .pillar-card:hover {
+    border-color: rgba(201,168,108,0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .pillar-card:hover::before { opacity: 1; }
+  .pillar-num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gold);
+    opacity: 0.2;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+  .pillar-card:hover .pillar-num { opacity: 0.5; }
+  .pillar-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s;
+  }
+  .pillar-card:hover .pillar-title { color: var(--gold); }
+  .pillar-desc {
+    font-size: 0.8rem;
+    color: var(--grey);
+    line-height: 1.7;
+    flex: 1;
+  }
+  .pillar-link {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 1.5rem;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s;
+  }
+  .pillar-card:hover .pillar-link { opacity: 1; transform: translateY(0); }
+
+  /* ═══════ PARTNER STRIP ═══════ */
+  .partner-strip {
+    overflow: hidden;
+    padding: 2.5rem 0;
+    border-top: 1px solid rgba(201,168,108,0.06);
+    border-bottom: 1px solid rgba(201,168,108,0.06);
+    margin-top: 3rem;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  }
+  .partner-strip-inner {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+  }
+  .partner-strip:hover .partner-strip-inner { animation-play-state: paused; }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .partner-strip img {
+    height: 32px;
+    opacity: 0.5;
+    filter: invert(1);
+    transition: opacity 0.3s;
+    flex-shrink: 0;
+  }
+  .partner-strip img:hover { opacity: 0.9; }
+  .partner-strip img[data-no-invert] {
+    filter: none;
+    opacity: 0.75;
+  }
+  .partner-strip img[data-no-invert]:hover { opacity: 1; }
+
+  /* ═══════ TRACKMAN TIERS ═══════ */
+  .tier-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-top: 3rem;
+    background: rgba(201,168,108,0.06);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .tier-item {
+    background: var(--black-rich);
+    cursor: pointer;
+  }
+  .tier-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.75rem 2.5rem;
+    transition: background 0.3s;
+  }
+  .tier-header:hover { background: rgba(201,168,108,0.04); }
+  .tier-header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .tier-name {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    min-width: 160px;
+  }
+  .tier-tagline {
+    font-size: 0.78rem;
+    color: var(--grey);
+    font-weight: 300;
+  }
+  .tier-badge {
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,108,0.25);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+  }
+  .tier-chevron {
+    color: var(--gold);
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+  }
+  .tier-item.open .tier-chevron { transform: rotate(180deg); }
+  .tier-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  .tier-item.open .tier-body {
+    max-height: 700px;
+  }
+  .tier-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0 2.5rem 2.5rem;
+  }
+  .tier-gallery img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s;
+  }
+  .tier-gallery img:hover { transform: scale(1.02); cursor: pointer; }
+
+  /* ═══════ LIGHTBOX ═══════ */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    padding: 2rem;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 6px;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+  }
+
+  /* ═══════ EAGLE SIM SUBTLE MENTION ═══════ */
+  .also-available {
+    margin-top: 3rem;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(201,168,108,0.06);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+  .also-available:hover { opacity: 0.85; }
+  .also-available img { height: 22px; filter: brightness(0) invert(1); flex-shrink: 0; }
+  .also-available p { font-size: 0.78rem; color: var(--grey-light); margin: 0; }
+  .tier-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1.5rem;
+    padding: 0 2.5rem 2rem;
+  }
+  .tier-feat {
+    font-size: 0.72rem;
+    color: var(--grey-light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+  }
+  .tier-feat span { color: var(--green-light); font-weight: 700; }
+
+  /* ═══════ SIMBAY + EAGLE SIM ═══════ */
+  .alt-systems {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  .system-card {
+    background: linear-gradient(160deg, rgba(13,31,18,0.4) 0%, rgba(10,14,7,0.7) 100%);
+    border: 1px solid rgba(201,168,108,0.08);
+    border-radius: 4px;
+    padding: 2.5rem;
+    transition: border-color 0.3s;
+  }
+  .system-card:hover { border-color: rgba(201,168,108,0.25); }
+  .system-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .system-card-header img { height: 32px; }
+  .system-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+  .system-card p {
+    font-size: 0.82rem;
+    color: var(--grey-light);
+    line-height: 1.7;
+  }
+  .system-feat-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .sys-feat {
+    font-size: 0.78rem;
+    color: var(--grey-light);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .sys-feat > span:first-child {
+    color: var(--green-light);
+    font-weight: 700;
+    flex-shrink: 0;
+    width: 16px;
+  }
+
+  /* ═══════ EQUIPMENT ═══════ */
+  .equip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .equip-card {
+    background: linear-gradient(160deg, rgba(13,31,18,0.3) 0%, rgba(10,14,7,0.6) 100%);
+    border: 1px solid rgba(201,168,108,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .equip-card:hover {
+    border-color: rgba(201,168,108,0.25);
+    transform: translateY(-3px);
+  }
+  .equip-logo-box {
+    background: rgba(201,168,108,0.04);
+    border-bottom: 1px solid rgba(201,168,108,0.06);
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+  }
+  .equip-logo-box img {
+    max-height: 44px;
+    max-width: 70%;
+    object-fit: contain;
+    filter: invert(1);
+    opacity: 0.85;
+  }
+  .equip-logo-box img[data-no-invert] {
+    filter: none;
+    opacity: 0.9;
+  }
+  .equip-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .equip-info h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+  .equip-info .equip-type {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 0.75rem;
+  }
+  .equip-info p {
+    font-size: 0.8rem;
+    color: var(--grey-light);
+    line-height: 1.6;
+    flex: 1;
+  }
+  .equip-link {
+    margin-top: 1rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* ═══════ COURSE & RANGE ═══════ */
+  .course-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .course-split img {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(201,168,108,0.08);
+  }
+  .course-features { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+  .course-feat {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .course-feat-icon {
+    width: 40px; height: 40px;
+    border-radius: 4px;
+    background: rgba(201,168,108,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+  .course-feat-icon svg {
+    width: 18px; height: 18px;
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .course-feat-text h5 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  .course-feat-text p {
+    font-size: 0.78rem;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  /* ═══════ PROJECT GALLERY ═══════ */
+  .project-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  .project-gallery-grid img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0.85);
+  }
+  .project-gallery-grid img:hover {
+    transform: scale(1.02);
+    filter: brightness(1);
+  }
+
+  /* ═══════ COVERAGE ═══════ */
+  .coverage-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .coverage-item {
+    text-align: center;
+    padding: 2rem 3rem;
+    border: 1px solid rgba(201,168,108,0.1);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  .coverage-item:hover { border-color: rgba(201,168,108,0.3); }
+  .coverage-flag { font-size: 2.5rem; margin-bottom: 0.75rem; }
+  .coverage-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  .coverage-sub {
+    font-size: 0.68rem;
+    color: var(--grey);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ═══════ CONTACT ═══════ */
+  #contact { background: var(--green-deep); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+  }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-form input, .contact-form textarea, .contact-form select {
+    background: rgba(244,241,236,0.05);
+    border: 1px solid rgba(201,168,108,0.12);
+    border-radius: 2px;
+    padding: 0.9rem 1.2rem;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 300;
+    transition: border-color 0.3s;
+  }
+  .contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+  .contact-form textarea { min-height: 120px; resize: vertical; }
+  .contact-channels { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
+  .channel {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: rgba(244,241,236,0.03);
+    border: 1px solid rgba(201,168,108,0.06);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  .channel:hover { border-color: rgba(201,168,108,0.2); }
+  .channel-icon {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(201,168,108,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+  .channel-info strong { display: block; font-size: 0.82rem; font-weight: 500; }
+  .channel-info span { font-size: 0.72rem; color: var(--grey); }
+
+  /* ═══════ FOOTER ═══════ */
+  footer {
+    border-top: 1px solid rgba(201,168,108,0.06);
+    padding: 3rem 0 2rem;
+    background: var(--black);
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .footer-logo img { height: 28px; opacity: 0.6; }
+  .footer-copy {
+    font-size: 0.68rem;
+    color: var(--grey-dark);
+    letter-spacing: 0.05em;
+  }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a {
+    font-size: 0.68rem;
+    color: var(--grey);
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ═══════ WHATSAPP FAB ═══════ */
+  .wa-fab {
+    position: fixed;
+    bottom: 1.5rem; right: 1.5rem;
+    z-index: 90;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.3s;
+  }
+  .wa-fab:hover { transform: scale(1.1); }
+  .wa-fab svg { width: 28px; height: 28px; fill: white; }
+
+  /* ═══════ REVEAL ANIMATION ═══════ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ═══════ RESPONSIVE ═══════ */
+  @media (max-width: 1024px) {
+    .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    .equip-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+    .alt-systems { grid-template-columns: 1fr; }
+    .course-split { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .hero-stats { gap: 2rem; flex-wrap: wrap; }
+    .tier-gallery { grid-template-columns: 1fr 1fr; }
+    .tier-header { padding: 1.25rem 1.5rem; }
+    .tier-gallery { padding: 0 1.5rem 1.5rem; }
+    .nav-links { display: none; }
+    .equip-grid { grid-template-columns: 1fr; }
+    .project-gallery-grid { grid-template-columns: 1fr 1fr !important; }
+    section { padding: 4rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-top">
+    <div class="nav-powered">
+      <img src="logos/trackman_powered_by_white.png" alt="Powered by Trackman">
+    </div>
+    <a href="#hero" class="nav-logo">
+      <img src="logos/golfview_logo_white.png" alt="Golf View">
+    </a>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="btnEn" class="active" onclick="setLang('en')">EN</button>
+        <button id="btnEl" onclick="setLang('el')">ΕΛ</button>
+      </div>
+      <a href="#contact" class="nav-cta" data-i18n="nav.cta">Get a Quote</a>
+    </div>
+  </div>
+  <div class="nav-bottom">
+    <a href="#indoor">Indoor Golf</a>
+    <a href="#outdoor">Outdoor</a>
+    <a href="#equipment">Equipment</a>
+    <a href="#course-solutions">Course &amp; Range</a>
+    <a href="#coverage">Coverage</a>
+    <a href='/projects'>Our Work</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-headline" data-i18n="hero.h1">The Complete<br><em>Golf Experience</em></h1>
+    <p class="hero-sub" data-i18n="hero.sub">From world-class indoor simulators to course design, player equipment, and range infrastructure. One partner for everything golf.</p>
+    <div class="hero-ctas">
+      <a href="#indoor" class="btn-primary" data-i18n="hero.cta1">Explore Solutions</a>
+      <a href="#contact" class="btn-ghost" data-i18n="hero.cta2">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">4</div>
+      <div class="hero-stat-label" data-i18n="hero.stat1">Divisions</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">10+</div>
+      <div class="hero-stat-label" data-i18n="hero.stat2">Premium Brands</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">3</div>
+      <div class="hero-stat-label" data-i18n="hero.stat3">Countries Served</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num" style="color:var(--trackman-orange)">Trackman</div>
+      <div class="hero-stat-label" data-i18n="hero.stat4">Official Installer</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUR PILLARS -->
+<section id="pillars">
+  <div class="container">
+    <span class="label reveal" data-i18n="pillars.label">What We Do</span>
+    <h2 class="section-title reveal" data-i18n="pillars.h2">Four Pillars of <em class="gold">Golf View</em></h2>
+    <div class="pillars-grid">
+      <a href="#indoor" class="pillar-card reveal">
+        <div class="pillar-num">01</div>
+        <h3 class="pillar-title" data-i18n="p1.title">Indoor Golf</h3>
+        <p class="pillar-desc" data-i18n="p1.desc">Turnkey simulator design &amp; installation. Residential dream rooms, commercial entertainment venues, and café-bar concepts. Powered by Trackman.</p>
+        <span class="pillar-link" data-i18n="p1.link">Explore Indoor →</span>
+      </a>
+      <a href="#outdoor" class="pillar-card reveal">
+        <div class="pillar-num">02</div>
+        <h3 class="pillar-title" data-i18n="p2.title">Outdoor Golf</h3>
+        <p class="pillar-desc" data-i18n="p2.desc">Driving range design, course architecture, and consulting. From concept to completion — we bring outdoor golf visions to life across the Mediterranean.</p>
+        <span class="pillar-link" data-i18n="p2.link">Explore Outdoor →</span>
+      </a>
+      <a href="#equipment" class="pillar-card reveal">
+        <div class="pillar-num">03</div>
+        <h3 class="pillar-title" data-i18n="p3.title">Player Equipment</h3>
+        <p class="pillar-desc" data-i18n="p3.desc">Premium clubs, bags, accessories, rangefinders, gloves &amp; more from MacGregor, Ben Hogan, Ram Golf, Zebra, Teardrop &amp; Forgan of St Andrews.</p>
+        <span class="pillar-link" data-i18n="p3.link">Explore Equipment →</span>
+      </a>
+      <a href="#course-solutions" class="pillar-card reveal">
+        <div class="pillar-num">04</div>
+        <h3 class="pillar-title" data-i18n="p4.title">Course &amp; Range Solutions</h3>
+        <p class="pillar-desc" data-i18n="p4.desc">Professional range infrastructure — ball feeders, hitting mats, tee stands, sand stations, bag stands. Powered by Duchell.</p>
+        <span class="pillar-link" data-i18n="p4.link">Explore Solutions →</span>
+      </a>
+    </div>
+    <div class="partner-strip reveal">
+      <div class="partner-strip-inner">
+        <img src="GreeceGolf/logo_trackman.svg" alt="Trackman">
+        <img src="logos/macgregorgolfgreen.jpeg" alt="MacGregor Golf" data-no-invert>
+        <img src="GreeceGolf/ben_hogan_v2.png" alt="Ben Hogan">
+        <img src="GreeceGolf/logo_ram.png" alt="Ram Golf">
+        <!-- duplicate set for seamless loop -->
+        <img src="GreeceGolf/logo_trackman.svg" alt="Trackman">
+        <img src="logos/macgregorgolfgreen.jpeg" alt="MacGregor Golf" data-no-invert>
+        <img src="GreeceGolf/ben_hogan_v2.png" alt="Ben Hogan">
+        <img src="GreeceGolf/logo_ram.png" alt="Ram Golf">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDOOR GOLF -->
+<section id="indoor">
+  <div class="container">
+    <span class="label reveal" data-i18n="indoor.label">Indoor Golf</span>
+    <h2 class="section-title reveal" data-i18n="indoor.h2">Trackman Simulator <em class="gold">Suites</em></h2>
+    <p class="section-sub reveal" data-i18n="indoor.sub">Three configurations engineered for every space and ambition. Each powered by Trackman's dual-radar technology — the same system trusted by 90% of PGA Tour professionals.</p>
+
+    <div class="tier-grid reveal">
+      <!-- CUSTOM -->
+      <div class="tier-item open" data-tier="custom">
+        <div class="tier-header" onclick="toggleTier(this)">
+          <div class="tier-header-left">
+            <span class="tier-name">Custom Suite</span>
+            <span class="tier-tagline" data-i18n="tier.custom.tag">Full room build-out. The dream.</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <span class="tier-badge">FLAGSHIP</span>
+            <span class="tier-chevron">▾</span>
+          </div>
+        </div>
+        <div class="tier-body">
+          <div class="tier-gallery">
+            <img src="trackman_custom.jpeg" alt="Trackman Custom Suite" loading="lazy">
+            <img src="trackman_custom2.jpeg" alt="Trackman Custom Suite" loading="lazy">
+            <img src="trackman_custom3.jpeg" alt="Trackman Custom Suite" loading="lazy">
+          </div>
+          <div class="tier-features">
+            <div class="tier-feat"><span>✓</span> Dedicated room with premium curtains &amp; lighting</div>
+            <div class="tier-feat"><span>✓</span> Designer furniture integration</div>
+            <div class="tier-feat"><span>✓</span> Commercial-grade for venues, hotels, private residences</div>
+            <div class="tier-feat"><span>✓</span> Full Trackman iO launch monitor system</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STANDALONE -->
+      <div class="tier-item" data-tier="standalone">
+        <div class="tier-header" onclick="toggleTier(this)">
+          <div class="tier-header-left">
+            <span class="tier-name">Standalone</span>
+            <span class="tier-tagline" data-i18n="tier.standalone.tag">Integrates into your existing space.</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <span class="tier-badge">VERSATILE</span>
+            <span class="tier-chevron">▾</span>
+          </div>
+        </div>
+        <div class="tier-body">
+          <div class="tier-gallery">
+            <img src="trackman_standalone_1.jpeg" alt="Trackman Standalone" loading="lazy">
+            <img src="trackman_standalone_2.jpeg" alt="Trackman Standalone" loading="lazy">
+            <img src="trackman_standalone3.jpeg" alt="Trackman Standalone" loading="lazy">
+          </div>
+          <div class="tier-features">
+            <div class="tier-feat"><span>✓</span> Self-contained simulator unit</div>
+            <div class="tier-feat"><span>✓</span> Fits living rooms, offices, entertainment spaces</div>
+            <div class="tier-feat"><span>✓</span> No permanent room modification required</div>
+            <div class="tier-feat"><span>✓</span> Full Trackman performance &amp; analytics</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- X-SMALL -->
+      <div class="tier-item" data-tier="xsmall">
+        <div class="tier-header" onclick="toggleTier(this)">
+          <div class="tier-header-left">
+            <span class="tier-name">X-Small</span>
+            <span class="tier-tagline" data-i18n="tier.xsmall.tag">Compact footprint. Full experience.</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <span class="tier-badge">COMPACT</span>
+            <span class="tier-chevron">▾</span>
+          </div>
+        </div>
+        <div class="tier-body">
+          <div class="tier-gallery">
+            <img src="trackman_x-small_1.jpeg" alt="Trackman X-Small" loading="lazy">
+            <img src="trackman_x-small_2.jpeg" alt="Trackman X-Small" loading="lazy">
+            <img src="trackman_x-small_3.jpeg" alt="Trackman X-Small" loading="lazy">
+          </div>
+          <div class="tier-features">
+            <div class="tier-feat"><span>✓</span> Garage, shed, or compact room installation</div>
+            <div class="tier-feat"><span>✓</span> Minimal ceiling height requirements</div>
+            <div class="tier-feat"><span>✓</span> Same Trackman accuracy &amp; course library</div>
+            <div class="tier-feat"><span>✓</span> Ideal entry point to indoor golf</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="installations-strip reveal" style="margin-top:3.5rem;">
+      <h4 style="font-family:var(--font-display); font-size:1.1rem; font-weight:400; color:var(--gold); margin-bottom:1.5rem; letter-spacing:0.05em;" data-i18n="indoor.installed">Completed Installations</h4>
+      <div class="project-gallery-grid" style="grid-template-columns: repeat(5,1fr); gap:0.5rem;">
+        <img src="GreeceGolf/thumbnail_image0.jpg" alt="Trackman simulator installation" onclick="openLightbox(this.src)" loading="lazy">
+        <img src="GreeceGolf/thumbnail_image1.jpg" alt="Trackman launch monitor setup" onclick="openLightbox(this.src)" loading="lazy">
+        <img src="GreeceGolf/thumbnail_image2-e1760780912716.jpg" alt="Indoor golf room with LED lighting" onclick="openLightbox(this.src)" loading="lazy">
+        <img src="GreeceGolf/thumbnail_image3.jpg" alt="Completed simulator room" onclick="openLightbox(this.src)" loading="lazy">
+        <img src="GreeceGolf/viber_image_2025-06-27_13-53-29-991.jpg" alt="Luxury simulator lounge" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PLAYER EQUIPMENT -->
+<section id="equipment">
+  <div class="container">
+    <span class="label reveal" data-i18n="equip.label">Player Equipment</span>
+    <h2 class="section-title reveal" data-i18n="equip.h2">Premium Brands, <em class="gold">Curated</em></h2>
+    <p class="section-sub reveal" data-i18n="equip.sub">Clubs, accessories, bags, gloves, balls, tees, and rangefinders from heritage brands with proven pedigree. Available for players across Greece, Cyprus, and the Balkans.</p>
+
+    <div class="equip-grid reveal">
+      <a class="equip-card" href="https://macgregorgolf.gr" target="_blank" rel="noopener">
+        <div class="equip-logo-box">
+          <img src="logos/macgregorgolfgreen.jpeg" alt="MacGregor Golf Greece" data-no-invert>
+        </div>
+        <div class="equip-info">
+          <h4>MacGregor Golf</h4>
+          <div class="equip-type" data-i18n="equip.mac.type">Clubs · Accessories · Apparel</div>
+          <p data-i18n="equip.mac.p">Official Greek installer. Premium iron sets, woods, bags, and accessories from one of golf's most storied names. Est. 1897.</p>
+          <span class="equip-link" data-i18n="equip.mac.link">Visit MacGregorGolf.gr →</span>
+        </div>
+      </a>
+      <div class="equip-card">
+        <div class="equip-logo-box">
+          <img src="GreeceGolf/ben_hogan_v2.png" alt="Ben Hogan Golf">
+        </div>
+        <div class="equip-info">
+          <h4>Ben Hogan Golf</h4>
+          <div class="equip-type" data-i18n="equip.hogan.type">Premium Irons &amp; Wedges</div>
+          <p data-i18n="equip.hogan.p">Precision-forged irons and wedges carrying the legacy of one of golf's greatest players. For the serious golfer.</p>
+          <span class="equip-link" data-i18n="equip.hogan.link">Coming Soon</span>
+        </div>
+      </div>
+      <div class="equip-card">
+        <div class="equip-logo-box">
+          <img src="GreeceGolf/logo_ram.png" alt="Ram Golf">
+        </div>
+        <div class="equip-info">
+          <h4>Ram Golf</h4>
+          <div class="equip-type" data-i18n="equip.ram.type">Clubs &amp; Equipment</div>
+          <p data-i18n="equip.ram.p">Complete club sets and equipment packages built for accessibility without compromising quality.</p>
+          <span class="equip-link" data-i18n="equip.ram.link">Enquire →</span>
+        </div>
+      </div>
+      <div class="equip-card">
+        <div class="equip-logo-box">
+          <img src="GreeceGolf/zebra-golf_v2.png" alt="Zebra Golf">
+        </div>
+        <div class="equip-info">
+          <h4>Zebra Golf</h4>
+          <div class="equip-type" data-i18n="equip.zebra.type">Putters &amp; Accessories</div>
+          <p data-i18n="equip.zebra.p">Specialised putters and short-game accessories from the brand that redefined putting alignment.</p>
+          <span class="equip-link" data-i18n="equip.zebra.link">Enquire →</span>
+        </div>
+      </div>
+      <div class="equip-card">
+        <div class="equip-logo-box">
+          <img src="GreeceGolf/logo_teardrop.svg" alt="Teardrop Golf">
+        </div>
+        <div class="equip-info">
+          <h4>Teardrop Golf</h4>
+          <div class="equip-type">Putters</div>
+          <p data-i18n="equip.teardrop.p">The original teardrop-shaped putter. Trusted by professionals and amateurs for decades.</p>
+          <span class="equip-link" data-i18n="equip.teardrop.link">Enquire →</span>
+        </div>
+      </div>
+      <div class="equip-card">
+        <div class="equip-logo-box" style="background:var(--green-deep);">
+          <span style="font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--white);">Forgan</span>
+        </div>
+        <div class="equip-info">
+          <h4>Forgan of St Andrews</h4>
+          <div class="equip-type" data-i18n="equip.forgan.type">Heritage Golf Equipment</div>
+          <p data-i18n="equip.forgan.p">Founded in 1860 in the home of golf. Affordable heritage equipment with unmatched provenance.</p>
+          <span class="equip-link" data-i18n="equip.forgan.link">Enquire →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSE & RANGE SOLUTIONS -->
+<section id="course-solutions">
+  <div class="container">
+    <span class="label reveal" data-i18n="course.label">Course &amp; Range Solutions</span>
+    <h2 class="section-title reveal" data-i18n="course.h2">Professional Range <em class="gold">Infrastructure</em></h2>
+    <p class="section-sub reveal" data-i18n="course.sub">Everything a driving range or golf course needs to operate at the highest standard. Supplied by Duchell — a European leader in range technology.</p>
+    <div class="course-features reveal">
+      <div class="course-feat">
+        <div class="course-feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="18" r="4"/><line x1="12" y1="2" x2="12" y2="14"/><line x1="12" y1="5" x2="17" y2="3"/></svg></div>
+        <div class="course-feat-text">
+          <h5 data-i18n="course.f1.h">Range Ball Feeders &amp; Dispensers</h5>
+          <p data-i18n="course.f1.p">Automated ball dispensing systems for high-volume driving ranges. Token, card, and app-operated.</p>
+        </div>
+      </div>
+      <div class="course-feat">
+        <div class="course-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
+        <div class="course-feat-text">
+          <h5 data-i18n="course.f2.h">Hitting Mats &amp; Tee Stations</h5>
+          <p data-i18n="course.f2.p">Commercial-grade hitting surfaces, rubber tee holders, and modular station systems for any range layout.</p>
+        </div>
+      </div>
+      <div class="course-feat">
+        <div class="course-feat-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <div class="course-feat-text">
+          <h5 data-i18n="course.f3.h">Sand Stations &amp; Divot Repair</h5>
+          <p data-i18n="course.f3.p">Tee-box sand buckets, bottle holders, and divot mix dispensers. The details that define a quality course.</p>
+        </div>
+      </div>
+      <div class="course-feat">
+        <div class="course-feat-icon"><svg viewBox="0 0 24 24"><path d="M3 9h18v12H3z"/><path d="M9 9V5a3 3 0 016 0v4"/><line x1="3" y1="15" x2="21" y2="15"/></svg></div>
+        <div class="course-feat-text">
+          <h5 data-i18n="course.f4.h">Bag Stands &amp; Range Furniture</h5>
+          <p data-i18n="course.f4.p">Bag racks, club holders, seating, and weather shelters. Functional infrastructure built for daily range use.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTDOOR GOLF -->
+<section id="outdoor">
+  <div class="container">
+    <span class="label reveal" data-i18n="outdoor.label">Outdoor Golf</span>
+    <h2 class="section-title reveal" data-i18n="outdoor.h2">Range Design &amp; <em class="gold">Course Architecture</em></h2>
+    <p class="section-sub reveal" data-i18n="outdoor.sub">Golf View designs and builds outdoor golf facilities — from driving ranges and practice greens to full course concepts. Bringing world-class outdoor golf to the Mediterranean landscape.</p>
+    <div class="project-gallery reveal" style="margin-top:2.5rem;">
+      <div class="project-gallery-grid">
+        <img src="GreeceGolf/viber_image_2025-06-27_14-07-34-713.jpg" alt="Outdoor range installation" onclick="openLightbox(this.src)" loading="lazy">
+        <img src="GreeceGolf/viber_image_2025-06-27_14-07-15-938.jpg" alt="Driving range setup" onclick="openLightbox(this.src)" loading="lazy">
+        <img src="GreeceGolf/viber_image_2025-06-27_14-07-19-099.jpg" alt="Range infrastructure" onclick="openLightbox(this.src)" loading="lazy">
+        <img src="GreeceGolf/viber_image_2025-06-27_14-07-20-844.jpg" alt="Outdoor golf project" onclick="openLightbox(this.src)" loading="lazy">
+        <img src="GreeceGolf/viber_image_2025-06-27_14-07-17-027.jpg" alt="Course development" onclick="openLightbox(this.src)" loading="lazy">
+        <img src="GreeceGolf/viber_image_2025-06-27_14-07-22-075.jpg" alt="Range construction" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+    </div>
+    <p style="font-size:0.75rem; color:var(--grey); margin-top:1.5rem; text-align:center;" class="reveal" data-i18n="outdoor.consult">Currently consulting on course design and range development across Greece. <a href="#contact" style="color:var(--gold);">Contact us</a> to discuss your vision.</p>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section id="coverage">
+  <div class="container" style="text-align:center;">
+    <span class="label reveal" style="justify-content:center;" data-i18n="cov.label">Coverage</span>
+    <h2 class="section-title reveal" data-i18n="cov.h2">Where We <em class="gold">Operate</em></h2>
+    <div class="coverage-grid reveal">
+      <div class="coverage-item">
+        <div class="coverage-flag">🇬🇷</div>
+        <div class="coverage-name">Greece</div>
+        <div class="coverage-sub" data-i18n="cov.gr">Nationwide · All Islands</div>
+      </div>
+      <div class="coverage-item">
+        <div class="coverage-flag">🇨🇾</div>
+        <div class="coverage-name">Cyprus</div>
+        <div class="coverage-sub" data-i18n="cov.cy">Full Island Coverage</div>
+      </div>
+      <div class="coverage-item">
+        <div class="coverage-flag">🌍</div>
+        <div class="coverage-name">Balkans</div>
+        <div class="coverage-sub" data-i18n="cov.bk">Bulgaria · Romania · Serbia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <span class="label reveal" data-i18n="contact.label">Get in Touch</span>
+    <h2 class="section-title reveal" data-i18n="contact.h2">Let's Talk <em class="gold">Golf</em></h2>
+    <div class="contact-grid reveal">
+      <form class="contact-form" name="golfview-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+      <input type="hidden" name="form-name" value="golfview-enquiry">
+      <p style="display:none"><label>Skip: <input name="bot-field"></label></p>
+        <input type="text" placeholder="Your Name" data-i18n-ph="form.name" required>
+        <input type="email" placeholder="Email Address" data-i18n-ph="form.email" required>
+        <select>
+          <option value="" data-i18n="form.interest">I'm interested in...</option>
+          <option value="indoor" data-i18n="form.indoor">Indoor Golf / Simulators</option>
+          <option value="equipment" data-i18n="form.equip">Player Equipment</option>
+          <option value="course" data-i18n="form.course">Course & Range Solutions</option>
+          <option value="outdoor" data-i18n="form.outdoor">Outdoor Golf / Course Design</option>
+          <option value="other" data-i18n="form.other">Other</option>
+        </select>
+        <textarea placeholder="Tell us about your project..." data-i18n-ph="form.msg"></textarea>
+        <button type="submit" class="btn-primary" data-i18n="form.send">Send Enquiry</button>
+      </form>
+      <div class="contact-channels">
+        <a class="channel" href="tel:+30XXXXXXXXXX">
+          <div class="channel-icon">📞</div>
+          <div class="channel-info">
+            <strong data-i18n="contact.phone">Phone</strong>
+            <span><a href="tel:+302108080199" style="color:inherit;text-decoration:none">+30 210 808 0199</a></span>
+          </div>
+        </a>
+        <a class="channel" href="https://wa.me/30XXXXXXXXXX" target="_blank">
+          <div class="channel-icon">💬</div>
+          <div class="channel-info">
+            <strong>WhatsApp</strong>
+            <span data-i18n="contact.wa">Quick response, anytime</span>
+          </div>
+        </a>
+        <a class="channel" href="mailto:<a href="mailto:golfviewgreece@gmail.com" style="color:inherit;text-decoration:none">info@golfview.golf</a>">
+          <div class="channel-icon">✉️</div>
+          <div class="channel-info">
+            <strong>Email</strong>
+            <span><a href="mailto:golfviewgreece@gmail.com" style="color:inherit;text-decoration:none">info@golfview.golf</a></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logos/golfview_logo_white.png" alt="Golf View">
+    </div>
+    <div class="footer-links">
+      <a href="#indoor">Indoor</a>
+      <a href="#equipment">Equipment</a>
+      <a href="#course-solutions">Course & Range</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Golf View. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a href="https://wa.me/30XXXXXXXXXX" target="_blank" class="wa-fab" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.305 0-4.461-.645-6.297-1.764l-.44-.27-2.633.882.882-2.633-.27-.44A9.965 9.965 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+</a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Enlarged view">
+</div>
+
+<script>
+// ═══════ LIGHTBOX ═══════
+function openLightbox(src) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Make tier gallery images clickable
+document.querySelectorAll('.tier-gallery img').forEach(img => {
+  img.onclick = () => openLightbox(img.src);
+});
+
+// ═══════ NAV SCROLL ═══════
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ═══════ TIER ACCORDION ═══════
+function toggleTier(header) {
+  const item = header.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.tier-item').forEach(t => t.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ═══════ REVEAL ON SCROLL ═══════
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ═══════ i18n ═══════
+const i18n = {
+  el: {
+    'nav.cta': 'Ζητήστε Προσφορά',
+    'hero.h1': 'Η Πλήρης<br><em>Εμπειρία Golf</em>',
+    'hero.sub': 'Από κορυφαίους εσωτερικούς προσομοιωτές μέχρι σχεδιασμό γηπέδων, εξοπλισμό παικτών και υποδομές γηπέδων. Ένας συνεργάτης για τα πάντα στο golf.',
+    'hero.cta1': 'Εξερεύνηση',
+    'hero.cta2': 'Επικοινωνία',
+    'hero.stat1': 'Τομείς',
+    'hero.stat2': 'Premium Brands',
+    'hero.stat3': 'Χώρες',
+    'hero.stat4': 'Επίσημος Εγκαταστάτης',
+    'pillars.label': 'Τι Κάνουμε',
+    'pillars.h2': 'Τέσσερις Πυλώνες του <em class="gold">Golf View</em>',
+    'p1.title': 'Εσωτερικό Golf',
+    'p1.desc': 'Ολοκληρωμένος σχεδιασμός & εγκατάσταση προσομοιωτών. Οικιακοί χώροι ονείρου, εμπορικοί χώροι ψυχαγωγίας και concepts café-bar. Με Trackman.',
+    'p1.link': 'Εξερευνήστε Indoor →',
+    'p2.title': 'Εξωτερικό Golf',
+    'p2.desc': 'Σχεδιασμός driving range, αρχιτεκτονική γηπέδων και συμβουλευτική. Φέρνουμε ζωή σε εξωτερικά golf projects στη Μεσόγειο.',
+    'p2.link': 'Εξερευνήστε Outdoor →',
+    'p3.title': 'Εξοπλισμός Παίκτη',
+    'p3.desc': 'Premium μπαστούνια, τσάντες, αξεσουάρ, rangefinders, γάντια & περισσότερα από MacGregor, Ben Hogan, Ram, Zebra, Teardrop & Forgan.',
+    'p3.link': 'Εξερευνήστε Εξοπλισμό →',
+    'p4.title': 'Λύσεις Γηπέδου & Range',
+    'p4.desc': 'Επαγγελματικές υποδομές range — τροφοδότες μπαλών, χτυπητήρια, stands, σταθμοί άμμου. Από τη Duchell, ευρωπαϊκό ηγέτη στην τεχνολογία range.',
+    'p4.link': 'Εξερευνήστε Λύσεις →',
+    'indoor.label': 'Εσωτερικό Golf',
+    'indoor.h2': 'Trackman Simulator <em class="gold">Suites</em>',
+    'indoor.sub': 'Τρεις διαμορφώσεις σχεδιασμένες για κάθε χώρο και φιλοδοξία. Κάθε μία τροφοδοτείται από την τεχνολογία διπλού ραντάρ της Trackman.',
+    'equip.label': 'Εξοπλισμός Παίκτη',
+    'equip.h2': 'Premium Brands, <em class="gold">Επιλεγμένα</em>',
+    'equip.sub': 'Μπαστούνια, αξεσουάρ, τσάντες, γάντια, μπάλες, tees και rangefinders από brands με αποδεδειγμένο πεδιγκρέ.',
+    'course.label': 'Λύσεις Γηπέδου & Range',
+    'course.h2': 'Επαγγελματική Υποδομή <em class="gold">Range</em>',
+    'course.sub': 'Ό,τι χρειάζεται ένα driving range ή γήπεδο golf για να λειτουργεί στο υψηλότερο επίπεδο. Από τη Duchell.',
+    'outdoor.label': 'Εξωτερικό Golf',
+    'outdoor.h2': 'Σχεδιασμός Range & <em class="gold">Αρχιτεκτονική Γηπέδου</em>',
+    'outdoor.sub': 'Το Golf View σχεδιάζει και κατασκευάζει εξωτερικές εγκαταστάσεις golf στο μεσογειακό τοπίο.',
+    'outdoor.consult': 'Παρέχουμε συμβουλευτική σε σχεδιασμό γηπέδων και ανάπτυξη range σε όλη την Ελλάδα. <a href="#contact" style="color:var(--gold);">Επικοινωνήστε μαζί μας</a> για το όραμά σας.',
+    'cov.label': 'Κάλυψη',
+    'cov.h2': 'Πού <em class="gold">Δραστηριοποιούμαστε</em>',
+    'cov.gr': 'Πανελλαδικά · Όλα τα Νησιά',
+    'cov.cy': 'Πλήρης Κάλυψη',
+    'cov.bk': 'Βουλγαρία · Ρουμανία · Σερβία',
+    'contact.label': 'Επικοινωνία',
+    'contact.h2': 'Ας Μιλήσουμε για <em class="gold">Golf</em>',
+    'form.send': 'Αποστολή',
+    'contact.phone': 'Τηλέφωνο',
+    'contact.wa': 'Γρήγορη απάντηση, οποτεδήποτε',
+  },
+  en: {} // English is the default in HTML
+};
+
+let currentLang = localStorage.getItem('gv_lang') || 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gv_lang', lang);
+  document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+  document.getElementById('btnEl').classList.toggle('active', lang === 'el');
+  document.documentElement.lang = lang;
+
+  if (lang === 'el') {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n.el[key]) el.innerHTML = i18n.el[key];
+    });
+  } else {
+    // Reload to restore English defaults
+    location.reload();
+  }
+}
+
+if (currentLang === 'el') setLang('el');
+</script>
+
+</body>
+</html>
