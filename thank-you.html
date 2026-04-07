@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Golf View</title>
+  <meta name="description" content="Your enquiry has been received. Golf View will be in touch shortly.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://golfview.golf/thank-you">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #07090a;
+      --green-deep: #0d1f12;
+      --green-mid: #1a3a22;
+      --gold: #c9a86c;
+      --gold-light: #e8c98a;
+      --white: #f4f1ec;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .logo-wrap { margin-bottom: 3rem; }
+    .logo-wrap img { height: 52px; margin: 0 auto; }
+
+    .checkmark {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+    }
+    .checkmark svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--gold);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+
+    p {
+      font-size: 1rem;
+      color: #aaa;
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+
+    .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: var(--gold);
+      color: #07090a;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+
+    .btn-ghost {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border: 1px solid rgba(201,168,108,0.4);
+      color: var(--gold);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: border-color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: rgba(201,168,108,0.3);
+      margin: 3rem auto;
+    }
+
+    .contact-strip {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .contact-item { color: #666; font-size: 0.85rem; }
+    .contact-item a { color: var(--gold); text-decoration: none; }
+
+    footer {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 0; right: 0;
+      text-align: center;
+      font-size: 0.7rem;
+      color: #444;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-wrap">
+    <img src="logos/nikos_golfviewlogo.jpeg" alt="Golf View">
+  </div>
+
+  <div class="checkmark">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  </div>
+
+  <span class="label">Enquiry Received</span>
+  <h1>We'll Be in <em>Touch</em></h1>
+  <p>Thank you for reaching out to Golf View. Our team will review your enquiry and get back to you within 24 hours.</p>
+
+  <div class="btn-group">
+    <a href="/" class="btn-primary">Back to Home</a>
+    <a href="/#indoor" class="btn-ghost">Explore Solutions</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact-strip">
+    <div class="contact-item">Phone: <a href="tel:+302108080199">+30 210 808 0199</a></div>
+    <div class="contact-item">Email: <a href="mailto:golfviewgreece@gmail.com">info@golfview.golf</a></div>
+  </div>
+
+  <footer>© 2026 Golf View. All rights reserved.</footer>
+
+</body>
+</html>
