@@ -2,20 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Golf View — Official Trackman distributor for Greece, Cyprus and the Balkans. Indoor simulators, outdoor golf, player equipment and range infrastructure. One partner for everything golf.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf View | Official Trackman Installer — Greece, Cyprus &amp; Balkans</title>
+  <meta name="description" content="Golf View is the official Trackman distributor for Greece, Cyprus and the Balkans. Indoor golf simulators, outdoor course design, premium player equipment and range infrastructure. Based in Athens.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Golf View">
+  <link rel="canonical" href="https://golfview.golf">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Golf View">
   <meta property="og:title" content="Golf View — The Complete Golf Experience">
   <meta property="og:description" content="Official Trackman distributor for Greece, Cyprus and the Balkans. Indoor simulators, outdoor golf, player equipment and range solutions.">
-  <meta property="og:image" content="https://golfview.golf/GreeceGolf/logo_trackman.svg">
+  <meta property="og:image" content="https://golfview.golf/trackman_custom3.jpeg">
   <meta property="og:url" content="https://golfview.golf">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="el_GR">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://golfview.golf">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golf View — The Complete Golf Experience</title>
-  <meta name="description" content="Golf View brings world-class indoor golf, premium equipment, outdoor course design, and range infrastructure to Greece, Cyprus &amp; the Balkans. Official Trackman Installer.">
-  <meta property="og:title" content="Golf View — The Complete Golf Experience">
-  <meta property="og:description" content="Indoor simulators. Player equipment. Course design. Range infrastructure. One partner for everything golf.">
-  <meta property="og:type" content="website">
+  <meta name="twitter:title" content="Golf View — The Complete Golf Experience">
+  <meta name="twitter:description" content="Official Trackman installer for Greece, Cyprus and the Balkans. Indoor simulators, equipment, course design.">
+  <meta name="twitter:image" content="https://golfview.golf/trackman_custom3.jpeg">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://golfview.golf">
+  <link rel="alternate" hreflang="el" href="https://golfview.golf">
+  <link rel="alternate" hreflang="x-default" href="https://golfview.golf">
+
+  <!-- Structured Data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Golf View",
+    "description": "Official Trackman distributor for Greece, Cyprus and the Balkans. Indoor golf simulators, outdoor course design, premium player equipment and professional range infrastructure.",
+    "url": "https://golfview.golf",
+    "telephone": "+302108080199",
+    "email": "info@golfview.golf",
+    "logo": "https://golfview.golf/logos/nikos_golfviewlogo.jpeg",
+    "image": "https://golfview.golf/trackman_custom3.jpeg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Athens",
+      "addressCountry": "GR"
+    },
+    "areaServed": [
+      {"@type": "Country", "name": "Greece"},
+      {"@type": "Country", "name": "Cyprus"},
+      {"@type": "Country", "name": "Bulgaria"},
+      {"@type": "Country", "name": "Romania"},
+      {"@type": "Country", "name": "Serbia"}
+    ],
+    "priceRange": "€€€",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Golf Solutions",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Indoor Golf Simulator Installation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Golf Course Design"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Driving Range Infrastructure"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Premium Golf Equipment"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1258,7 +1311,7 @@
       <p style="display:none"><label>Skip: <input name="bot-field"></label></p>
         <input type="text" placeholder="Your Name" data-i18n-ph="form.name" required>
         <input type="email" placeholder="Email Address" data-i18n-ph="form.email" required>
-        <select>
+        <select name="interest">
           <option value="" data-i18n="form.interest">I'm interested in...</option>
           <option value="indoor" data-i18n="form.indoor">Indoor Golf / Simulators</option>
           <option value="equipment" data-i18n="form.equip">Player Equipment</option>
