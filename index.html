@@ -12,10 +12,6 @@
   <link rel="canonical" href="https://golfview.golf">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Golf View — The Complete Golf Experience</title>
-  <meta name="description" content="Golf View brings world-class indoor golf, premium equipment, outdoor course design, and range infrastructure to Greece, Cyprus &amp; the Balkans. Official Trackman Installer.">
-  <meta property="og:title" content="Golf View — The Complete Golf Experience">
-  <meta property="og:description" content="Indoor simulators. Player equipment. Course design. Range infrastructure. One partner for everything golf.">
-  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -764,8 +760,26 @@
   }
   .contact-form input:focus, .contact-form textarea:focus {
     outline: none;
-    border-color: var(--gold);
+    border-color: rgba(201,168,108,0.6);
+    background: rgba(244,241,236,0.07);
   }
+  .contact-form-wrap {
+    position: relative;
+    padding: 2.5rem;
+    border-radius: 6px;
+    background: rgba(13,31,18,0.6);
+    border: 1px solid rgba(201,168,108,0.1);
+  }
+  .contact-form-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -60px;
+    background: radial-gradient(ellipse at 50% 60%, rgba(201,168,108,0.10) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 50%;
+  }
+  .contact-form-wrap > * { position: relative; z-index: 1; }
   .contact-form textarea { min-height: 120px; resize: vertical; }
   .contact-channels { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
   .channel {
@@ -791,6 +805,41 @@
   }
   .channel-info strong { display: block; font-size: 0.82rem; font-weight: 500; }
   .channel-info span { font-size: 0.72rem; color: var(--grey); }
+
+  /* ═══════ SECTION CTA STRIP ═══════ */
+  .section-cta {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(201,168,108,0.1);
+  }
+  .section-cta .btn-primary { padding: 0.9rem 2.2rem; }
+  .section-cta-note {
+    font-size: 0.75rem;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  /* ═══════ DUCHELL IMAGE ═══════ */
+  .duchell-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-top: 2.5rem;
+  }
+  .duchell-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 2px;
+    opacity: 0.85;
+  }
+  @media (max-width: 768px) {
+    .duchell-layout { grid-template-columns: 1fr; }
+  }
 
   /* ═══════ FOOTER ═══════ */
   footer {
@@ -1079,6 +1128,11 @@
       </div>
     </div>
 
+    <div class="section-cta reveal">
+      <a href="#contact" class="btn-primary">Book a Demo</a>
+      <p class="section-cta-note">We'll assess your space, walk you through each tier,<br>and recommend the right system for your budget and room.</p>
+    </div>
+
   </div>
 </section>
 
@@ -1166,7 +1220,10 @@
     <span class="label reveal" data-i18n="course.label">Course &amp; Range Solutions</span>
     <h2 class="section-title reveal" data-i18n="course.h2">Professional Range <em class="gold">Infrastructure</em></h2>
     <p class="section-sub reveal" data-i18n="course.sub">Everything a driving range or golf course needs to operate at the highest standard. Supplied by Duchell — a European leader in range technology.</p>
-    <div class="course-features reveal">
+    <div class="duchell-layout reveal">
+      <img src="GreeceGolf/viber_image_2025-06-27_14-07-34-713.jpg" alt="Professional range infrastructure" class="duchell-img" onclick="openLightbox(this.src)">
+      <div>
+    <div class="course-features">
       <div class="course-feat">
         <div class="course-feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="18" r="4"/><line x1="12" y1="2" x2="12" y2="14"/><line x1="12" y1="5" x2="17" y2="3"/></svg></div>
         <div class="course-feat-text">
@@ -1195,7 +1252,12 @@
           <p data-i18n="course.f4.p">Bag racks, club holders, seating, and weather shelters. Functional infrastructure built for daily range use.</p>
         </div>
       </div>
-    </div>
+      <div class="section-cta" style="margin-top:2rem;padding-top:2rem;">
+        <a href="#contact" class="btn-primary">Get a Quote</a>
+        <p class="section-cta-note">Range feeders, mats, tee stations, bag stands and more.<br>We'll spec the right setup for your facility.</p>
+      </div>
+      </div><!-- close duchell-layout right col -->
+    </div><!-- close duchell-layout -->
   </div>
 </section>
 
@@ -1215,7 +1277,10 @@
         <img src="GreeceGolf/viber_image_2025-06-27_14-07-22-075.jpg" alt="Range construction" onclick="openLightbox(this.src)" loading="lazy">
       </div>
     </div>
-    <p style="font-size:0.75rem; color:var(--grey); margin-top:1.5rem; text-align:center;" class="reveal" data-i18n="outdoor.consult">Currently consulting on course design and range development across Greece. <a href="#contact" style="color:var(--gold);">Contact us</a> to discuss your vision.</p>
+    <div class="section-cta reveal" style="justify-content:center;">
+      <a href="#contact" class="btn-primary">Start Your Project</a>
+      <p class="section-cta-note">Currently consulting on course design and range development<br>across Greece, Cyprus, and the Balkans.</p>
+    </div>
   </div>
 </section>
 
@@ -1250,38 +1315,32 @@
     <span class="label reveal" data-i18n="contact.label">Get in Touch</span>
     <h2 class="section-title reveal" data-i18n="contact.h2">Let's Talk <em class="gold">Golf</em></h2>
     <div class="contact-grid reveal">
+      <div class="contact-form-wrap">
       <form class="contact-form" name="golfview-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
       <input type="hidden" name="form-name" value="golfview-enquiry">
       <p style="display:none"><label>Skip: <input name="bot-field"></label></p>
-        <input type="text" placeholder="Your Name" data-i18n-ph="form.name" required>
-        <input type="email" placeholder="Email Address" data-i18n-ph="form.email" required>
-        <select>
-          <option value="" data-i18n="form.interest">I'm interested in...</option>
-          <option value="indoor" data-i18n="form.indoor">Indoor Golf / Simulators</option>
-          <option value="equipment" data-i18n="form.equip">Player Equipment</option>
-          <option value="course" data-i18n="form.course">Course & Range Solutions</option>
-          <option value="outdoor" data-i18n="form.outdoor">Outdoor Golf / Course Design</option>
-          <option value="other" data-i18n="form.other">Other</option>
-        </select>
-        <textarea placeholder="Tell us about your project..." data-i18n-ph="form.msg"></textarea>
+        <input type="text" name="name" placeholder="Your Name" data-i18n-ph="form.name" required>
+        <input type="email" name="email" placeholder="Email Address" data-i18n-ph="form.email" required>
+        <textarea name="message" placeholder="Tell us about your project..." data-i18n-ph="form.msg"></textarea>
         <button type="submit" class="btn-primary" data-i18n="form.send">Send Enquiry</button>
       </form>
+      </div>
       <div class="contact-channels">
-        <a class="channel" href="tel:+30XXXXXXXXXX">
+        <a class="channel" href="tel:+302108080199">
           <div class="channel-icon">📞</div>
           <div class="channel-info">
             <strong data-i18n="contact.phone">Phone</strong>
             <span><a href="tel:+302108080199" style="color:inherit;text-decoration:none">+30 210 808 0199</a></span>
           </div>
         </a>
-        <a class="channel" href="https://wa.me/30XXXXXXXXXX" target="_blank">
+        <a class="channel" href="https://wa.me/302108080199" target="_blank">
           <div class="channel-icon">💬</div>
           <div class="channel-info">
             <strong>WhatsApp</strong>
-            <span data-i18n="contact.wa">Quick response, anytime</span>
+            <span>+30 210 808 0199</span>
           </div>
         </a>
-        <a class="channel" href="mailto:<a href="mailto:golfviewgreece@gmail.com" style="color:inherit;text-decoration:none">info@golfview.golf</a>">
+        <a class="channel" href="mailto:golfviewgreece@gmail.com">
           <div class="channel-icon">✉️</div>
           <div class="channel-info">
             <strong>Email</strong>
@@ -1310,7 +1369,7 @@
 </footer>
 
 <!-- WHATSAPP FAB -->
-<a href="https://wa.me/30XXXXXXXXXX" target="_blank" class="wa-fab" aria-label="WhatsApp">
+<a href="https://wa.me/302108080199" target="_blank" class="wa-fab" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.305 0-4.461-.645-6.297-1.764l-.44-.27-2.633.882.882-2.633-.27-.44A9.965 9.965 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
 </a>
 
@@ -1436,3 +1495,4 @@ if (currentLang === 'el') setLang('el');
 
 </body>
 </html>
+
